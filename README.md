@@ -55,6 +55,12 @@ Run the tracking script:
 model.ipynb
 ```
 
+```bash
+git clone https://github.com/JDAI-CV/fast-reid.git
+```
+Download Pretrained weights for bagtricks_R101-ibn
+from model zoo of fastreid
+
 While running:  
 - Press **Q** to quit.  
 - CSV log will be saved as `person_appearance_log.csv` in the project directory.  
