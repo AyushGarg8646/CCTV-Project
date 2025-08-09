@@ -19,11 +19,10 @@ It assigns unique IDs to people, even if they temporarily leave and re-enter the
 ## Project Structure
 ```
 .
-├── model/                 # Pre-trained FastReID model
-├── bytetrack.yaml          # Tracker configuration
-├── person_appearance_log.csv # CSV logs of appearances & reappearances
-├── main.py                 # Main tracking + re-id script
-├── README.md               # Project documentation
+├── bytetrack.yaml                 # Tracker configuration
+├── person_appearance_log.csv      # CSV logs of appearances & reappearances
+├── model-copy.ipynb               # Main tracking + re-id script
+├── README.md                      # Project documentation
 ```
 
 ---
