@@ -1,13 +1,9 @@
-# Person Tracking & Re-Identification in CCTV Footage
+                                      # Person Tracking & Re-Identification in CCTV Footage
 
-## 📌 Overview
+## Overview
 This project integrates **ByteTrack** (multi-object tracking) with **FastReID** (person re-identification) to track and re-identify individuals across CCTV footage in real time.  
 It assigns unique IDs to people, even if they temporarily leave and re-enter the frame, using deep visual feature matching.
-
-Additional features include:  
-- **First appearance & reappearance logging** for each person.  
-- **CSV-based event logging** for easy analysis.  
-- **Configurable thresholds** for similarity matching and reappearance detection.  
+ tching and reappearance detection.  
 
 ---
 
@@ -20,7 +16,7 @@ Additional features include:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```
 .
 ├── model/                 # Pre-trained FastReID model
@@ -32,7 +28,7 @@ Additional features include:
 
 ---
 
-## ⚙️ Requirements
+##  Requirements
 Install dependencies with:
 ```bash
 pip install ultralytics torch torchvision opencv-python
@@ -44,7 +40,7 @@ pip install fastreid
 
 ---
 
-## 📸 How It Works
+## How It Works
 1. **YOLOv8** detects persons in each CCTV frame.  
 2. **ByteTrack** assigns short-term tracking IDs.  
 3. **FastReID** extracts visual embeddings for each detected person.  
@@ -54,7 +50,7 @@ pip install fastreid
 
 ---
 
-## 🖥️ Usage
+##  Usage
 Run the tracking script:
 ```bash
 model.ipynb
@@ -66,7 +62,7 @@ While running:
 
 ---
 
-## 📊 Example Log Output
+## Example Log Output
 | PersonID | EventType     | Time_HHMMSS | UnixTimestamp   |
 |----------|--------------|-------------|-----------------|
 | 0        | appearance   | 12:04:32    | 1691650472.45   |
@@ -75,7 +71,7 @@ While running:
 
 ---
 
-## 🔧 Configuration
+##  Configuration
 You can tweak the following parameters in `main.py`:  
 - `SIMILARITY_THRESHOLD` → Cosine similarity for ID matching.  
 - `CONFIRM_FRAMES` → Frames required before assigning a new ID.  
@@ -84,5 +80,5 @@ You can tweak the following parameters in `main.py`:
 - `FEATURE HISTORY` → No. of vector embeddings to store,default=30.  
 ---
 
-## 📜 License
+## License
 This project uses **AGPL-3.0** due to YOLOv8 licensing.
