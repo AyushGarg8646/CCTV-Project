@@ -7,7 +7,7 @@ It assigns unique IDs to people, even if they temporarily leave and re-enter the
 
 ---
 
-## 🚀 Features
+## Features
 - **YOLOv8 + ByteTrack** for fast & accurate person detection & tracking.  
 - **FastReID** for matching appearances across frames.  
 - **Appearance/Reappearance Tracking** with timestamps.  
