@@ -57,7 +57,7 @@ pip install fastreid
 ## 🖥️ Usage
 Run the tracking script:
 ```bash
-python main.py
+model.ipynb
 ```
 
 While running:  
@@ -81,7 +81,7 @@ You can tweak the following parameters in `main.py`:
 - `CONFIRM_FRAMES` → Frames required before assigning a new ID.  
 - `REAPPEAR_THRESHOLD` → Seconds before an ID is counted as reappearing.  
 - `MIN_BOX_AREA` → Minimum area of a detection to consider.  
-
+- `FEATURE HISTORY` → No. of vector embeddings to store,default=30.  
 ---
 
 ## 📜 License
