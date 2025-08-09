@@ -1,0 +1,40 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# Default Ultralytics settings for ByteTrack tracker when using mode="track"
+# For documentation and examples see https://docs.ultralytics.com/modes/track/
+# For ByteTrack source code see https://github.com/ifzhang/ByteTrack
+
+# tracker_type: bytetrack # tracker type, ['botsort', 'bytetrack']
+# track_high_thresh: 0.35 # threshold for the first association
+# track_low_thresh: 0.1 # threshold for the second association
+# new_track_thresh: 0.35 # threshold for init new track if the detection does not match any tracks
+# track_buffer: 90 # buffer to calculate the time when to remove tracks
+# match_thresh: 0.7 # threshold for matching tracks
+# fuse_score: False # Whether to fuse confidence scores with the iou distances before matching
+# min_box_area: 100  # threshold for min box areas(for tracker evaluation, not used for now)
+# tracker_type: bytetrack
+
+# # Detection association thresholds
+# track_high_thresh: 0.35     # ↑ slightly higher for stable initial matches
+# track_low_thresh: 0.1     # ↓ low enough to recover tracks after missed frames
+# new_track_thresh: 0.35      # ↑ avoid false new IDs from weak detections
+
+# # Persistence and re-identification
+# track_buffer: 60           # ↑ keep tracks alive longer (good for occlusion recovery)
+# match_thresh: 0.7       # ↑ require higher IoU to match detections before relying on ReID
+# fuse_score: False           # Let FastReID handle matching, not confidence fusion
+
+# # Optional stability tweaks
+# min_box_area: 100           # Ignore tiny false detections in CCTV
+# mot20: False               # Adjusts internal matching for crowded scenes
+
+
+
+tracker_type: bytetrack        # Keep ByteTrack as tracker
+track_high_thresh: 0.5         # Stricter first association, only confident matches
+track_low_thresh: 0.1          # Keep low for secondary association
+new_track_thresh: 0.6          # Require higher confidence to start a new track, avoid unnecessary IDs
+track_buffer: 150              # Keep tracks alive longer (good for CCTV gaps)
+match_thresh: 0.85              # Increase match threshold for tighter IoU matching
+fuse_score: False              # Let FastReID handle identity matching, no score fusion
+min_box_area: 800               # Ignore small noisy boxes (CCTV often produces tiny false positives)
