@@ -3,7 +3,7 @@
 ## Overview
 This project integrates **ByteTrack** (multi-object tracking) with **FastReID** (person re-identification) to track and re-identify individuals across CCTV footage in real time.  
 It assigns unique IDs to people, even if they temporarily leave and re-enter the frame, using deep visual feature matching.
- tching and reappearance detection.  
+Matching and reappearance detection.  
 
 ---
 
